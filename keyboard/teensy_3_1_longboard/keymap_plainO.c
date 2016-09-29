@@ -14,10 +14,10 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
     [0] =
-    KEYMAP( TAB,    Q,    W,    E,    R,    T,   No,  DEL,    Y,    U,    I,    O,    P, BSPC, \
-            ESC,    A,    S,    D,    F,    G,   No, PSCR,    H,    J,    K,    L, SCLN, QUOT,  \
-           LSFT,    Z,    X,    C,    V,    B,   No,   No,    N,    M, COMM,  DOT,SLASH,ENTER, \
-             NO, LCTL, LALT, LGUI,  FN0,SHIFT,ENTER,   No,  SPC,   NO, LEFT, DOWN,   UP, RGHT),
+    KEYMAP( TAB,    Q,    W,    E,    R,    T,   NO,  DEL,    Y,    U,    I,    O,    P, BSPC, \
+            ESC,    A,    S,    D,    F,    G,   NO, PSCR,    H,    J,    K,    L, SCLN, QUOT, \
+           LSFT,    Z,    X,    C,    V,    B,   NO,   NO,    N,    M, COMM,  DOT,SLASH,ENTER, \
+             NO, LCTL, LALT, LGUI,  FN0, RSFT,ENTER,   NO,  SPC,   NO, LEFT, DOWN,   UP, RGHT),
 
     /* Layer 1: HHKB mode (HHKB Fn)
      * ,-----------------------------------------------------------.
@@ -35,8 +35,8 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = 
     KEYMAP( PWR,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12,  INS,   \
            CAPS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PSCR, SLCK, PAUS,   UP, TRNS, BSPC,   \
-           TRNS, VOLD, VOLU, MUTE, TRNS, TRNS, PAST, PSLS, HOME, PGUP, LEFT, RGHT, PENT, TRNS,   \        \
-           TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PPLS, PMNS,  END, PGDN, DOWN, TRNS, TRNS, TRNS),   
+           TRNS, VOLD, VOLU, MUTE, TRNS, TRNS, PAST, PSLS, HOME, PGUP, LEFT, RGHT, PENT, TRNS,   \ 
+		   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PPLS, PMNS,  END, PGDN, DOWN, TRNS, TRNS, TRNS),   
 };
 
 const action_t fn_actions[] = {

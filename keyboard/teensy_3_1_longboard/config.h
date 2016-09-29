@@ -31,8 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USBSTR_PRODUCT         'I', '\x00', 'n', '\x00', 'f', '\x00', 'i', '\x00', 'n', '\x00', 'i', '\x00', 't', '\x00', 'y', '\x00', ' ', '\x00', 'k', '\x00', 'e', '\x00', 'y', '\x00', 'b', '\x00', 'o', '\x00', 'a', '\x00', 'r', '\x00', 'd', '\x00', '/', '\x00', 'T', '\x00', 'M', '\x00', 'K', '\x00'
 
 /* key matrix size */
-#define MATRIX_ROWS 9
-#define MATRIX_COLS 7
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 14
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
@@ -50,8 +50,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-/* Keymap for Infiity prototype */
-#define INFINITY_PROTOTYPE
+/* Keymap for Infiity prototype 
+#define INFINITY_PROTOTYPE*/
 
 
 /*
