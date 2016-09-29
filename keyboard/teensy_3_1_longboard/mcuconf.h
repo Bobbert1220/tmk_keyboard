@@ -49,7 +49,7 @@
 #define KINETIS_USB_USE_USB0                TRUE
 /* Need to redefine this, since the default is for K20x */
 /* This is for Teensy LC; you should comment it out (or change to 5)
- * for Teensy 3.x */
-#define KINETIS_USB_USB0_IRQ_PRIORITY       2
+ * for Teensy 3.x
+#define KINETIS_USB_USB0_IRQ_PRIORITY       2 */
 
 #endif /* _MCUCONF_H_ */
