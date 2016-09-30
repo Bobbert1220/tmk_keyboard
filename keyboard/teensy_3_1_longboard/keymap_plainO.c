@@ -5,41 +5,78 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Layer 0: Default Layer
      * Qwerty
 	 * ,-------------------------------------------------------------------------------------------------.
-	 * | Tab  |   Q  |   W  |   E  |   R  |   T  |      | Del  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+	 * | Tab  |   Q  |   W  |   E  |   R  |   T  | PtScr| Del  |   Y  |   U  |   I  |   O  |   P  | Bksp |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Esc  |   A  |   S  |   D  |   F  |   G  |      | PtScr|   H  |   J  |   K  |   L  |   ;  |  "   |
+	 * | Esc  |   A  |   S  |   D  |   F  |   G  |   -  |   =  |   H  |   J  |   K  |   L  |   ;  |  "   |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Shift|   Z  |   X  |   C  |   V  |   B  |      |      |   N  |   M  |   ,  |   .  |   /  |Enter |
+	 * |      |   Z  |   X  |   C  |   V  |   B  |   [  |   ]  |   N  |   M  |   ,  |   .  |   /  |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * |      | Ctrl | Alt  | GUI  |Lower | Shift| Enter|      | Space| Raise| Left | Down |  Up  |Right |
+	 * |      | Ctrl | Alt  | GUI  |  Fn0 | Shift| Ctrl | Enter| Space|  Fn1 | Left | Down |  Up  |Right |
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
     [0] =
     KEYMAP(  TAB,    Q,    W,    E,    R,    T,   NO,  DEL,    Y,    U,    I,    O,    P, BSPC, \
              ESC,    A,    S,    D,    F,    G,   NO, PSCR,    H,    J,    K,    L, SCLN, QUOT, \
             LSFT,    Z,    X,    C,    V,    B,   NO,   NO,    N,    M, COMM,  DOT,SLASH,ENTER, \
-              NO, LCTL, LALT, LGUI,  FN0, RSFT,ENTER,   NO,  SPC,   NO, LEFT, DOWN,   UP, RGHT),
+              NO, LCTL, LALT, LGUI,  FN0, RSFT,ENTER,   NO,  SPC,  FN1, LEFT, DOWN,   UP, RGHT),
 
     /* Layer 1: FN0 Layer
-     * Qwerty
+     *  Numbers and functions
 	 * ,-------------------------------------------------------------------------------------------------.
-	 * | Tab  |   Q  |   W  |   E  |   R  |   T  |      |      |      |   1  |   2  |   3  |      |      |
+	 * |      | FN1  |  FN2 | FN3  |  FN4 |      |      |      |      |   1  |   2  |   3  |      |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Esc  |   A  |   S  |   D  |   F  |   G  |      |      |      |   4  |   5  |   6  |      |      |
+	 * |      |  FN5 | FN6  | FN7  | FN8  |      |      |      |      |   4  |   5  |   6  |      |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * | Shift|   Z  |   X  |   C  |   V  |   B  |      |      |      |   7  |   8  |   9  |      |      |
+	 * |      |  FN9 | FN10 | FN11 | FN12 |      |      |      |      |   7  |   8  |   9  |      |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-	 * |      | Ctrl | Alt  | GUI  |Lower | Shift| Enter|      |      |   0  |      |      |      |      |
+	 * |      |      |      |      |      |      |      |      |      |      |   0  |      |      |      |
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
     [1] = 
-    KEYMAP(  PWR,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12,  INS,   \
-            CAPS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PSCR, SLCK, PAUS,   UP, TRNS, BSPC,   \
-            TRNS, VOLD, VOLU, MUTE, TRNS, TRNS, PAST, PSLS, HOME, PGUP, LEFT, RGHT, PENT, TRNS,   \
-		    TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PPLS, PMNS,  END, PGDN, DOWN, TRNS, TRNS, TRNS),   
+    KEYMAP( TRNS,   F1,   F2,   F3,   F4, TRNS, TRNS, TRNS, TRNS,    1,    2,    3, TRNS, TRNS,   \
+            TRNS,   F5,   F6,   F7,   F8, TRNS, TRNS, TRNS, TRNS,    4,    5,    6, TRNS, TRNS,   \
+            TRNS,   F9,  F10,  F11,  F12, TRNS, TRNS, TRNS, TRNS,    7,    8,    9, TRNS, TRNS,   \
+		    TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,    0, TRNS, TRNS, TRNS),
+
+	/* Layer 2: FN1 Layer
+     *  
+	 * ,-------------------------------------------------------------------------------------------------.
+	 * |      |      |      |  Up  |      |      |      |      |      |  WHup|  Up  | Whdwn|      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      | Left | DOWN | Right|      |      |      |      |Left  | Down | Right|      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      |      | MB1  | MB2  |      |      |      |      |      |      |      |      |      |
+	 * `-------------------------------------------------------------------------------------------------'
+	 */
+    [2] = 
+    KEYMAP( TRNS, TRNS, TRNS,   UP, TRNS, TRNS, TRNS, TRNS, TRNS, WH_D, MS_U, WH_U, TRNS, TRNS,   \
+            TRNS, TRNS, LEFT, DOWN, RGHT, TRNS, TRNS, TRNS, TRNS, MS_L, MS_D, MS_R, TRNS, TRNS,   \
+            TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   \
+		    TRNS, TRNS, TRNS, BTN1, BTN2, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS),
+
+	/* Layer 3: FN2 Layer
+     *  
+	 * ,-------------------------------------------------------------------------------------------------.
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+	 * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+	 * `-------------------------------------------------------------------------------------------------'
+	 */
+    [3] = 
+    KEYMAP( TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   \
+            TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   \
+            TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   \
+		    TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS),			
 };
 
 const action_t fn_actions[] = {
     [0] = ACTION_LAYER_MOMENTARY(1),
+	[1] = ACTION_LAYER_MOMENTARY(2),ll
 };
 
